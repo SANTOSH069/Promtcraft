@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PromptCraft</title>
+    <meta name="description" content="Generate Prompts in Seconds With PromptCraft" />
+    <meta name="author" content="PromptCraft" />
+
+    <meta property="og:title" content="jsonforge-ai" />
+    <meta property="og:description" content="Generating Prompts in Seonds" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- Theme script to prevent flash of wrong theme -->
+    <script>
+      (function() {
+        const storageKey = 'ui-theme';
+        const theme = localStorage.getItem(storageKey) || 'dark';
+        const root = document.documentElement;
+        
+        // Remove any existing theme classes
+        root.classList.remove('light', 'dark');
+        
+        if (theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          root.classList.add('dark');
+        } else {
+          root.classList.add('light');
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
